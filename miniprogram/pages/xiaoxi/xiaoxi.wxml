@@ -1,0 +1,63 @@
+<wxs module="tools" src="/utils/filter1.wxs" />
+
+<view class="top" bindtouchstart="huitan">
+
+</view>
+<view class="message">
+  <view class="xunhuan" wx:for="{{message}}" wx:key="idex" wx:for-item="item0" wx:for-index="index0">
+    <movable-area class="yc" bindtap="chakan" data-ssid="{{message[message.length-index0-1].ssid}}"
+      data-id="{{message[message.length-index0-1].id}}" data-liuyan="{{message[message.length-index0-1].liuyan}}"
+      style="display:flex;width:750rpx;height:170rpx">
+      <movable-view style="display:flex;width:900rpx;height:170rpx" direction="horizontal" animation="true"
+        x="{{x[message.length-index0-1]}}" bindchange="change" data-index="{{message.length-index0-1}}"
+        bindtouchend="change1" damping="100" out-of-bounds="true">
+
+        <view class="left" style="display:flex;width:720rpx;padding:15rpx;height:140rpx">
+          <!-- 第一部分图片 -->
+          <view class="A" style="display:flex;">
+            <image class="pl" src="{{message[message.length-index0-1].photo}}"
+              style="width:80rpx;height:80rpx;border-radius: 10rpx;overflow: hidden;" />
+          </view>
+          <!-- 第二部分,回复及对应ss -->
+          <view class="B" style="margin-left:20rpx;display:flex;flex-direction:column">
+            <view class="huifuren" style="font-size:100%">{{message[message.length-index0-1].name}}
+              <image class="lz" src="/images/icon/wd.png" wx:if="{{message[message.length-index0-1].yidu==false}}"
+                style="width:55rpx;height:auto;border-radius: 5rpx;overflow: hidden;margin-left:10rpx;"
+                mode="widthFix" />
+            </view>
+
+            <view class="tishi"
+              style="font-size:100%;margin-bottom:10rpx;width:600rpx;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              {{message[message.length-index0-1].plnr}}</view>
+
+            <view class="di" style="display:flex">
+              <view class="wbnr" wx:if="{{message[message.length-index0-1].type==='pinglun'}}"
+                style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;font-size:78%;color:#656565">
+                评论了你的帖子</view>
+              <view class="wbnr" wx:if="{{message[message.length-index0-1].type==='huifu'}}"
+                style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;font-size:78%;color:#656565">
+                回复了你的评论</view>
+
+              <view class="time"
+                style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;font-size:78%;color:#656565;margin-left:15rpx">
+                {{tools.getDateTime(message[message.length-index0-1].time)}}</view>
+            </view>
+          </view>
+        </view><!-- left -->
+        <view class="fu"
+          style="display:flex;align-items: center;justify-content: center;width:150rpx;height:170rpx;background-color:red;"
+          catchtap="delete" data-ssid="{{item0.ssid}}" data-id="{{item0.id}}" data-index="{{index0}}">
+          <text class="delete" style="color:#ffffff;font-size:120%">删除</text>
+        </view>
+        <!-- </view> -->
+      </movable-view>
+    </movable-area>
+    <view class="line"></view>
+  </view>
+
+  <view wx:if="{{message.length==0}}" style="display:flex;align-items:center;">
+    <image
+      src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01825c5c2053e4a8012029ac5c6c95.jpg%401280w_1l_2o_100sh.jpg&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642614765&t=fe23926f3b969c61b33f87ea92cf349b"
+      style="margin:180rpx 100rpx;width:100%;height:auto" mode="widthFix"></image>
+  </view>
+</view>

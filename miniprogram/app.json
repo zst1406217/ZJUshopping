@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/wd/wd",
+    "pages/xiaoxi/xiaoxi",
+    "pages/post/post",
+    "pages/fenleiyemian/fenleiyemian",
+    "pages/xiangqing/xiangqing",
+    "pages/shangpinliebiao/shangpinliebiao",
+    "pages/my/about/about",
+    "pages/my/help/help",
+    "pages/my/women/women"
+  ],
+  "window": {
+    "backgroundColorTop": "#D3D3D3",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFCC33",
+    "navigationBarTitleText": "浙大校园购",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#f7e7c5",
+    "color": "#000000",
+    "selectedColor": "#fc9550",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/guangchang.png",
+        "selectedIconPath": "images/guangchang1.png"
+      },
+      {
+        "pagePath": "pages/xiaoxi/xiaoxi",
+        "text": "消息",
+        "iconPath": "images/xinxi0.png",
+        "selectedIconPath": "images/xinxi.png"
+      },
+      {
+        "pagePath": "pages/my/wd/wd",
+        "text": "我的",
+        "iconPath": "images/wode.png",
+        "selectedIconPath": "images/wode1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

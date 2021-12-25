@@ -1,0 +1,38 @@
+page {
+  background-color: rgb(255, 255, 255);
+}
+.wd-list {
+  margin-top: 20rpx;
+  border: 1rpx solid #dddddd;
+  background-color: rgb(243, 243, 243);
+  border-radius: 50rpx;
+  margin:30rpx;
+
+}
+
+.wdlist {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 5rpx;
+  border-bottom: 1px solid #B0B2BF;
+}
+
+.wdlist-last {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 5rpx;
+}
+
+.wdlist-nr{
+  padding-left: 10rpx;
+}

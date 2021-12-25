@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+  },
+  "navigationBarTitleText": "浙大校园购",
+  "enablePullDownRefresh":true,
+  "backgroundColor":"#2A6C86",
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,6 @@
+/* miniprogram/pages/shangpinliebiao/shangpinliebiao.wxss */
+.line {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+}

@@ -1,0 +1,8 @@
+/* pages/my/women/women.wxss */
+.wd-list {
+  margin-top: 20rpx;
+  border: 1rpx solid #dddddd;
+  background-color: rgb(243, 243, 243);
+  border-radius: 25rpx;
+  margin: 30rpx;
+}

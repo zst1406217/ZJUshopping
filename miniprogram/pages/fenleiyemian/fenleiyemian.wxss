@@ -1,0 +1,71 @@
+.moveview{
+  border-radius: 60%;
+  position:relative;
+  pointer-events: auto;
+}
+.goTop{
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 50%;
+  opacity:0.6;
+}
+.B{
+  width: 720rpx;
+  padding: 30rpx 20rpx;
+  background-color: #FFFFFF;
+  display: flex;
+  border-bottom: 0.1px solid #D5D5D5;
+  background-color: #f7e7c5;
+}
+.B1{
+  width: 80rpx;
+  background-color: #FFFFFF;
+  height: 104rpx;
+  margin-right: 10rpx;
+  background-color: #f7e7c5;
+}
+.photo{
+  width:100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+  height:auto
+}
+.B2{
+  width: 600rpx;
+  background-color: #f7e7c5;
+  display: flex;
+  flex-direction: column;
+}
+.B21{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10rpx;
+  width:580rpx;
+  background-color: #f7e7c5;
+}
+.B23{
+  padding: 10rpx ;
+}
+.B24{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10rpx;
+  width:580rpx;
+  margin-top:10rpx;
+  background-color: #f7e7c5;
+}
+.dzpl{
+  display: flex;
+}
+.img2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.B22{
+  width: 100%;
+  margin:10rpx;
+  white-space: pre-line;
+  word-break: break-all;
+  word-wrap: break-word;
+  width:580rpx
+}

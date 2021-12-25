@@ -1,0 +1,325 @@
+<wxs module="tools" src="/utils/filter1.wxs" />
+<wxs module="tools1" src="/utils/filter.wxs" />
+<!-- 下面是整个页面，不失效则展示 -->
+<view class="shixiao" wx:if="{{good_detail!=0}}">
+  <!-- 整个说说及评论区 -->
+  <view class="A" style="width: 598rpx; height: 564rpx; display: block; box-sizing: content-box">
+    <!-- 写个留言板的上方信息 -->
+    <view class="daoxuq" wx:if="{{liuyan==true}}" style="display:flex;flex-direction:column-reverse">
+      <view class="waiq" style="width:720rpx;padding:15rpx;display:flex;flex-direction:column-reverse">
+        <view class="Aq"
+          style="border-radius:15rpx;overflow:hidden;background-color:#ffffff;width:720rpx;margin-top:8rpx;border-style: solid;box-shadow:0px 2px 4px 2px #DDDDDD;border-width: 0rpx;"
+          data-address="{{good_detail.address}}" bindtap="tiaozhuan" data-id="{{good_detail._id}}">
+          <!-- 中 -->
+          <image class="tpq" style="width:720rpx;height:297rpx; " mode="aspectFill" src="{{good_detail.image}}"></image>
+          <!-- 下 -->
+          <view class="wbnrq" style="width:700rpx;padding:15rpx;">{{good_detail.title}}</view>
+          <view class="xiaxiaq" style="display:flex;justify-content:space-between;margin-bottom:5rpx;">
+            <!-- 下 下 -->
+            <view class="wbnrq" style="margin-left:15rpx;color:#C0C0C0;font-size:90%">{{good_detail.look}}次浏览</view>
+            <!-- 时间 -->
+            <view class="timeq" style="color:#C0C0C0;font-size:90%;margin-right:15rpx">
+              {{tools.getDateTime(good_detail.time)}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 上面写个留言板的上方信息 -->
+
+    <!-- 下面为说说主体 -->
+    <view class="B" wx:if="{{liuyan==false}}">
+      <!-- B1为头像 -->
+      <view class="B1">
+        <image wx:if="{{good_detail.good_detail.niming1!=true}}" class="photo"
+          src="{{good_detail.good_detail.userphoto}}" mode="widthFix">
+        </image>
+        <image wx:else class="photo" src="/images/user/niming.png" mode="widthFix"></image>
+      </view>
+      <!-- B2为其他内容 -->
+      <view class="B2">
+        <!-- 第一部分 -->
+        <view class="B21" style="display: flex;flex-direction: column">
+          <view class="qian" style="display: flex;">
+            <view class="name" style="font-size:100%;margin-top:5rpx;color:#656565;white-space: nowrap;">
+              {{good_detail.good_detail.username}}
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==0&&good_detail.good_detail.zilei==0}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 320rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/qita1.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==1&&good_detail.good_detail.zilei==0}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/dianzi:shuma.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==1&&good_detail.good_detail.zilei==1}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/dianzi:jiayong.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==2&&good_detail.good_detail.zilei==0}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/shuji:shuji.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==2&&good_detail.good_detail.zilei==1}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/shuji:wenju.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==2&&good_detail.good_detail.zilei==2}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/shuji:xuexi.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==3&&good_detail.good_detail.zilei==0}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/fuzhuang:nvshi1.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==3&&igood_detail.good_detail.zilei==1}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/fuzhuang:nanshi1.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==3&&good_detail.good_detail.zilei==2}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/fuzhuang:shoushi1.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==3&&good_detail.good_detail.zilei==3}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/fuzhuang:xiangbao1.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==4&&good_detail.good_detail.zilei==0}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/shipin:xiuxian.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==4&&good_detail.good_detail.zilei==1}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/shipin:yinpin.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==4&&good_detail.good_detail.zilei==2}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/shipin:shushi.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==5&&good_detail.good_detail.zilei==0}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/daibu:zixing.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==5&&good_detail.good_detail.zilei==1}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/daibu:diandong.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==5&&good_detail.good_detail.zilei==2}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/daibu:changpeng.png'></image>
+            </view>
+            <view class="fenlei" wx:if="{{good_detail.good_detail.bankuai==5&&good_detail.good_detail.zilei==3}}"
+              style="font-size: 20rpx; margin-top: 15rpx; margin-left: 245rpx; color: #ff3333; width: 254rpx; height: 44rpx; display: block; box-sizing: border-box">
+              <image style="width: 330rpx; height: 40rpx; display: inline-block; box-sizing: border-box"
+                src='/images/daibu:F1.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 下面显示时间 -->
+        <view class="time" style="font-size:85%;color:#B0B0B0;font-weight:lighter">
+          {{tools.getDateTime(good_detail.time)}}
+        </view>
+
+        <!-- 第二部分 -->
+        <view class="B22">{{good_detail.good_detail.nr}}</view>
+        <!-- 第三部分 -->
+        <view class="B23">
+          <view wx:if="{{good_detail.good_detail.tp.length>0}}" class="img2" style="width: 100%;">
+            <view class="xunhuan" wx:for="{{good_detail.good_detail.tp}}" wx:key="index"
+              style="width: 580rpx;height:auto" wx:for-item="item1">
+              <image class="duozhang" src="{{item1}}" style="width: 600rpx;height:auto; margin-bottom:8rpx"
+                mode="widthFix" data-tp="{{[index,good_detail.good_detail.tp]}}" bindtap="previewImg" />
+            </view>
+          </view>
+        </view>
+        <view class="B24">
+
+          <view class="dzpl" style="margin-right:20rpx">
+            <!-- 下面显示收藏 -->
+            <view class="shoucangshu" style="font-size:78%;color:#B0B0B0;font-weight:lighter">
+              想要{{good_detail.good_detail.shoucangshu}}
+            </view>
+
+            <!-- 下面显示回复， -->
+            <view class="huifushu"
+              style="font-size:78%;color:#B0B0B0;margin-left:10rpx;margin-right:10rpx;font-weight:lighter">评论
+              {{good_detail.good_detail.huifushu}}</view>
+
+            <!-- 下面显示浏览， -->
+            <view class="shoucangshu" style="font-size:78%;color:#B0B0B0;font-weight:lighter">浏览
+              {{good_detail.good_detail.look}}
+            </view>
+          </view>
+        </view>
+        <view style="font-size:30rpx; margin-left: 10rpx;margin: 10rpx;">{{good_detail.good_detail.na_me}}</view>
+
+        <view class="name-price" style="font-size:78%;color:#ff6700;margin-left:10rpx;">
+          {{good_detail.good_detail.pri_ce}}元
+        </view>
+
+      </view>
+    </view>
+    <!-- 上面为说说主体 -->
+
+    <!-- B的附属展示收藏与转发 -->
+    <view class="Bfs" style="display:flex;height:10rpx;">
+      <button wx:if="{{liuyan==false}}" class="shoucang"
+        style="background-color: #ffffff; display: flex; justify-content: center; align-items: center; border-radius: 50rpx; border: 1rpx solid rgba(0,0,0,0.2); opacity: 0.8; margin-right: 50rpx; margin-left: 50rpx; width: 168rpx; height: 58rpx; box-sizing: border-box; left: 511rpx; top: -80rpx; position: relative"
+        bindtap="shoucang" data-id="{{good_detail._id}}" data-shoucangid="{{good_detail.good_detail.shoucangid}}">
+        <view class="wz" wx:if="{{shoucang}}"
+          style="padding: 200rpx;background-color: #FFCC33;color:#3b3939;white-space: nowrap;">已想要</view>
+        <view class="wz" wx:if="{{!shoucang}}" style="color:#3b3939;white-space: nowrap ;">想要</view>
+      </button>
+    </view>
+    <!-- 上面B的附属展示收藏与转发 -->
+
+    <!-- 下面是评论区 -->
+    <view class="C">
+      <!-- 第一部分,“最新评论”四个字 -->
+      <image style="width: 568rpx; height: 68rpx;  margin-left: 10px;" src="/images/liuyan.png" />
+      <!-- 下面为评论数据空白时的图片 -->
+      <view class="kong1" style="display:flex;justify-content:center">
+        <image wx:if="{{good_detail.good_detail.huifunr.length==0}}" class="kong2" style="margin-top: 50rpx;" />
+      </view>
+
+      <!-- 额外加个倒序 -->
+      <view class="daoxu" style="display:flex;flex-direction:column-reverse">
+        <!-- 第二部分,遍历所有评论 -->
+        <view class="C2" style="display:flex;" wx:for="{{good_detail.good_detail.huifunr}}" wx:key="index"
+          wx:for-item="item0" wx:for-index="index0" bindlongpress="changanshanchu" data-id0="{{item0.plrid}}"
+          data-index="{{index0}}" data-time="{{item0.time}}" data-huifushu="{{item0.huifushu}}">
+
+          <!-- 头像部分 -->
+          <view
+            wx:if="{{(good_detail.good_detail.lzid==_id && item0.sifa==true)||(item0.sifa==false)||(item0.plrid==_id && item0.sifa==true)}}"
+            class="C21" style="flex:1;margin:15rpx">
+            <image wx:if="{{item0.niming!=true}}" class="photo" src="{{item0.photo}}" mode="widthFix"
+              style="border-radius:50%;overflow: hidden;border:1rpx solid rgba(0,0,0, .5)"></image>
+            <image wx:else class="photo" src="/images/user/niming.png" mode="widthFix"
+              style="border-radius:50%;overflow: hidden;"></image>
+          </view>
+          <!-- 头像右边所有 -->
+          <view
+            wx:if="{{(good_detail.good_detail.lzid==_id && item0.sifa==true)||(item0.sifa==false)||(item0.plrid==_id && item0.sifa==true)}}"
+            class="C22" style="flex:8;display:flex;flex-direction:column;margin:15rpx">
+            <!-- name及楼主标识-->
+            <view class="C221" style="display:flex">
+              <!-- name及 -->
+              <view class="name" wx:if="{{item0.niming!=true}}"
+                style="font-size:95%;color:#656565;word-break: break-all;word-wrap: break-word;font-weight:bold;">
+                {{item0.name}}</view>
+              <view class="name" wx:else style="font-size:95%;color:#656565;font-weight:bold;">匿名用户</view>
+              <!-- 楼主标识 -->
+              <image class="lz" src="/images/maijia.png" wx:if="{{item0.louzhu==true}}"
+                style="width:55rpx;height:auto;border-radius: 5rpx;overflow: hidden;margin-left:10rpx;"
+                mode="widthFix" />
+              <image class="" src="/images/bukejian.png" wx:if="{{item0.sifa==true}}"
+                style="width:35rpx;height:auto;border-radius: 5rpx;overflow: hidden;margin-left:10rpx;"
+                mode="widthFix" />
+            </view>
+            <!-- 发布内容 -->
+            <view class="C222" style="margin:8rpx 0;word-break:break-all;word-wrap:break-word;margin-right:20rpx">
+              {{item0.wbnr}}</view>
+            <!-- 发布时间及回复 -->
+            <view class="wai" style="display:flex">
+              <view class="C223" style="font-size:80%;color:#B0B0B0">{{tools1.timeChn(item0.time)}}</view>
+              <text class="hf" catchtap="huifu" data-xx="{{item0}}" data-index="{{index0}}"
+                style="margin-left:20rpx;font-weight:bold;font-size:85%;color:#656565">回复</text>
+            </view>
+            <!-- 评论的评论展开 -->
+            <view class="wai" wx:if="{{item0.huifu.length>0}}"
+              style="margin-top:10rpx;border-radius: 8rpx;overflow: hidden;" bindtap="zhankai" data-index="{{index0}}"
+              hidden="{{item0.zhankai}}">
+              <view class="wb" style="font-size:70%;color:#757575;">{{item0.huifu.length}}条回复▶</view>
+            </view>
+            <view class="pinglun" wx:for="{{item0.huifu}}" wx:key="index1" wx:for-index="index1" wx:for-item="item1"
+              style="display:flex" wx:if="{{item0.zhankai}}" catchlongpress="changanshanchu" data-id0="{{item0.plrid}}"
+              data-index="{{index0}}" data-time="{{item0.time}}" data-index1="{{index1}}" data-id1="{{item1.plrid}}"
+              data-time1="{{item1.time}}">
+              <view class="zuo" style="flex:1;margin:10rpx">
+                <image wx:if="{{item1.niming!=true}}" class="photo" src="{{item1.photo}}" mode="widthFix"
+                  style="border-radius:50%;overflow: hidden;"></image>
+                <image wx:else class="photo" src="/images/user/niming.png" mode="widthFix"
+                  style="border-radius:50%;overflow: hidden;"></image>
+              </view>
+              <view class="you" style="flex:11;display:flex;flex-direction:column;margin:15rpx">
+                <!-- 头像右边所有 -->
+                <!-- name及楼主标识-->
+                <view class="C221" style="display:flex;align-items:center">
+                  <!-- name及 -->
+                  <view class="name"
+                    style="font-size:95%;color:#656565;white-space: pre-line;word-break: break-all;word-wrap: break-word;font-weight:bold;">
+                    {{item1.name}}</view>
+                  <!-- 楼主标识 -->
+                  <image class="lz" src="/images/maijia.png" wx:if="{{item1.louzhu==true}}"
+                    style="width:55rpx;height:auto;border-radius: 5rpx;overflow: hidden;margin-left:10rpx;"
+                    mode="widthFix" />
+                </view>
+                <!-- 发布内容 -->
+                <view class="C222"
+                  style="margin:8rpx 0;white-space:pre-line;word-break:break-all;word-wrap:break-word;">{{item1.wbnr}}
+                </view>
+
+                <!-- 发布时间及回复 -->
+                <view class="wai" style="display:flex">
+                  <view class="C223" style="font-size:80%;color:#B0B0B0">{{tools1.timeChn(item1.time)}}</view>
+
+                  <text class="hf" catchtap="huifu" data-xx="{{item0}}" data-xx1="{{item1}}" data-index="{{index0}}"
+                    data-index1="{{index1}}"
+                    style="margin-left:20rpx;font-weight:bold;font-size:85%;color:#656565">回复</text>
+                  <view class="wai" style="margin-left:20rpx;font-size:80%;color:#757575;" bindtap="shouqi"
+                    data-index="{{index0}}" hidden="{{!item0.zhankai}}">--收起▲</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="height: 100rpx;"></view>
+  </view>
+  <view class="kongbai" style="height:100rpx" />
+
+  <!-- 下面是评论框 -->
+  <form bindsubmit="fasong">
+    <view class="pinglun"
+      style="position:fixed;bottom:0rpx;width:750rpx;background-color:#ffffff;border-top:thin solid #D5D5D5;">
+      <view class="bg"
+        style="display: flex; border-radius: 50rpx; overflow: hidden; background-color: #e6e6e6; width: 690rpx; margin: 10rpx 15rpx; height: 66rpx; box-sizing: border-box">
+        <input type="text" bindinput="wbnr" placeholder="{{input}}" focus="{{focus}}" value='{{wbnr}}'
+          placeholder-style="color:#656565;" bindblur="shijiao" style="width:100%;margin:10rpx 30rpx;"
+          maxlength="150"></input>
+        <view bindtap="simi" id="sifa">
+          <image style="margin-top: 6rpx;width:50rpx; height: 50rpx;"
+            src="{{ifsimi==true?'/images/bukejian.png':'/images/kejian.png'}}" />
+        </view>
+        <view bindtap="fasong" style="width:130rpx;white-space:nowrap;margin:10rpx 0;margin-right:20rpx;color:#008b1e">|
+          发送</view>
+      </view>
+    </view>
+  </form>
+  <!-- 上面是评论框 -->
+</view>
+<!-- 上面是整个页面，不失效则展示 -->
+<!-- 下面为失效状态 -->
+<view class="shixiao" style="display:flex;flex-direction:column;justify-content:center" wx:if="{{good_detail==0}}">
+  <image src="/images/shixiao.png" mode="widthFix" style="width:100%;height:auto"></image>
+  <text style="color:#656565;text-align:center;width:100%">这条动态消失了~~</text>
+</view>
+<!-- 上面为失效状态 -->

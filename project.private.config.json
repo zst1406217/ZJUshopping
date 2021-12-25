@@ -1,0 +1,60 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "板块内",
+          "pathName": "pages\\fenleiyemian\\fenleiyemian",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/post/post",
+          "pathName": "pages/post/post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/message/xiaoxi/xiaoxi",
+          "pathName": "pages/message/xiaoxi/xiaoxi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设置",
+          "pathName": "pages/my/set/set",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "入驻用户",
+          "pathName": "pages/my/tj_user/tj_user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "留言板",
+          "pathName": "pages/xiangqing/xiangqing",
+          "query": "id=20210316gao&fenxiang=true&liuyan=true",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!--pages/my/help/help.wxml-->
+<view class="wd-list">
+  <view style="margin-left:20rpx;margin-right:20rpx">
+    <view bindtap="open_1">
+      <view class="title" style="display:flex;justify-content:space-between">
+        <view style="display:inline">如何使用？</view>
+        <view style="display:inline">
+          <image hidden="{{isTrue_1==true}}" src="../../../images/jiantou-xia.png" style="width:30rpx;height:30rpx;">
+          </image>
+          <image hidden="{{isTrue_1==false}}" src="../../../images/jiantou-shang.png"
+            style="width:30rpx;height:30rpx;text-align: right;"></image>
+        </view>
+      </view>
+      <view class="line"></view>
+
+    </view>
+    <view class="content_detail" hidden="{{isTrue_1==false}}">
+      <text>　　第一次使用需要在“我的”界面进行登录。在主页可以看到广场上所有发布的商品，主页最上方有五个分类板块可以分别查看。如果对一件商品感兴趣，可以点亮小星星，这样这件商品就会进入“我的”界面中“我感兴趣的商品”。如果有意购买这件商品，可以点击该帖子进入详情页面查看，并发表评论。
+        　　如果有敏感信息如手机号、支付宝账号等不方便公开发表的，可以点击私发再发表，这样只有自己和楼主能够看到。同时发表的评论会进入楼主的消息提醒界面，如果楼主有意出售，就会尽快联系你的！</text>
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view style="margin-left:20rpx;margin-right:20rpx">
+    <view bindtap="open_2">
+      <view class="title" style="display:flex;justify-content:space-between;margin-bottom: 20rpx;">
+        <view style="display:inline">如何发帖？</view>
+        <view style="display:inline">
+          <image hidden="{{isTrue_2==true}}" src="../../../images/jiantou-xia.png" style="width:30rpx;height:30rpx;">
+          </image>
+          <image hidden="{{isTrue_2==false}}" src="../../../images/jiantou-shang.png"
+            style="width:30rpx;height:30rpx;text-align: right;"></image>
+        </view>
+      </view>
+
+
+    </view>
+    <view class="content_detail" hidden="{{isTrue_2==false}}">
+      <view class="line"></view>
+      <view style="margin-top: 20rpx;">
+        <text>　　点击主页右下角加号，填写商品名称、商品价格、商品详情并选择商品分类，添加商品图片。全部写好后点击立即发布，即可将你的商品推荐给大家看了！</text></view>
+    </view>
+  </view>
+</view>

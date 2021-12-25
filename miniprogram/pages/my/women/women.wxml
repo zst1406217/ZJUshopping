@@ -1,0 +1,12 @@
+<!--pages/my/women/women.wxml-->
+<view class="background" style="width:750rpx;height:100vh;background-color:white">
+  <view class="shang"
+    style="display:flex;flex-direction:column;justify-content:space-around;align-items:center;height:260rpx;margin-top: 100rpx;">
+    <image class="tubiao" src="/images/xiaohui.png"
+      style="width:200rpx;height:200rpx;border-radius:50%;overflow: hidden;"></image>
+    <view class="wb1" style="color:#FFFFFF;font-size:120%;margin-top:10rpx">{{nm}}</view>
+  </view>
+  <view class="wd-list">
+    <view style="margin-top: 20rpx; margin-bottom: 20rpx;">　　　　我们是永不秃头的微小程小队！</view>
+  </view>
+</view>

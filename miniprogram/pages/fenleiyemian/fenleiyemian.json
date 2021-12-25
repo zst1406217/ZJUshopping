@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "板块内容",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#fffff1",
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 50
+}

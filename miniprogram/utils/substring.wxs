@@ -1,0 +1,9 @@
+var substring = function (e) {
+  //这个用来搞图片的预加载，截取url做id
+  var str=e.slice(-17,)
+  return str
+}
+
+module.exports = {
+  substring: substring
+}
