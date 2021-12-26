@@ -13,6 +13,9 @@
   ],
   "window": {
     "backgroundColorTop": "#D3D3D3",
+    "backgroundColorBottom": "#D3D3D3",
+    "backgroundColorLeft": "#D3D3D3",
+    "backgroundColorRight": "#D3D3D3",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFCC33",
     "navigationBarTitleText": "浙大校园购",

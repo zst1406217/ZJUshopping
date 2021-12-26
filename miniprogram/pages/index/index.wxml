@@ -11,6 +11,7 @@
 </movable-area>
 
 <!-- 主页 -->
+<view class="limit" >
 <view class="zhuye" style="background-color: #f7e7c5;">
   <view style="height: 10rpx;background-color: #f7e7c5;"></view>
   <!-- 板块六个 -->
@@ -50,7 +51,7 @@
     <!-- 下面为数据空白时的图片 -->
     <view class="kong1" style="display:flex;justify-content:center">
       <image wx:if="{{kong==true && good_detail.length==0}}" class="kong2" src="/images/kong.jpg" mode="widthFix"
-        style="width:500rpx;margin-top:100rpx;height:auto" />
+        style="width:1000rpx;height:auto" />
     </view>
     <!-- 下面为加载时的loading图片 -->
     <view class="kong1" style="display:flex;justify-content:center">
@@ -226,4 +227,5 @@
       </view>
     </view>
   </view>
+</view>
 </view>

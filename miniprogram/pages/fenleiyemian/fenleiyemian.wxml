@@ -6,6 +6,7 @@
   </movable-view>
 </movable-area>
 
+<view class="limit">
 <view class="A">
   <!-- 下面为数据空白时的图片 -->
   <view class="kong1" style="display:flex;justify-content:center">
@@ -89,4 +90,5 @@
       </view>
     </view>
   </view>
+</view>
 </view>
