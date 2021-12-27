@@ -48,7 +48,7 @@
       <view class="A42"
         style="background-color:#F5F7F9;width:216rpx;height:216rpx;border-radius: 10rpx;overflow: hidden;display:flex;justify-content:center;align-items:center"
         bindtap="chooseImg" wx:if="{{imgs.length<9}}">
-        <image src="/images/post/tp.png" style="width:150rpx;height:150rpx;"></image>
+        <image src="/images/tp.png" style="width:150rpx;height:150rpx;"></image>
       </view>
 
     </view>
