@@ -252,19 +252,19 @@
               style="display:flex" wx:if="{{item0.zhankai}}" catchlongpress="changanshanchu" data-id0="{{item0.plrid}}"
               data-index="{{index0}}" data-time="{{item0.time}}" data-index1="{{index1}}" data-id1="{{item1.plrid}}"
               data-time1="{{item1.time}}">
-              <view class="zuo" style="flex:1;margin:10rpx">
+              <view class="zuo" style="flex:1;margin:15rpx">
                 <image wx:if="{{item1.niming!=true}}" class="photo" src="{{item1.photo}}" mode="widthFix"
-                  style="border-radius:50%;overflow: hidden;"></image>
+                  style=" border-radius:50%;overflow: hidden;"></image>
                 <image wx:else class="photo" src="/images/user/niming.png" mode="widthFix"
                   style="border-radius:50%;overflow: hidden;"></image>
               </view>
-              <view class="you" style="flex:11;display:flex;flex-direction:column;margin:15rpx">
+              <view class="you" style="flex:9;display:flex;flex-direction:column;margin-left:15rpx">
                 <!-- 头像右边所有 -->
                 <!-- name及楼主标识-->
                 <view class="C221" style="display:flex;align-items:center">
                   <!-- name及 -->
                   <view class="name"
-                    style="font-size:95%;color:#656565;white-space: pre-line;word-break: break-all;word-wrap: break-word;font-weight:bold;">
+                    style="font-size:95%;color:#656565;word-break: break-all;word-wrap: break-word;font-weight:bold;">
                     {{item1.name}}</view>
                   <!-- 楼主标识 -->
                   <image class="lz" src="/images/maijia.png" wx:if="{{item1.louzhu==true}}"
